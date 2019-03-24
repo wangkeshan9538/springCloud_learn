@@ -12,6 +12,8 @@
         <module>provider</module>
         <module>consumer</module>
         <module>service_registry</module>
+        <module>ribbo_consumer</module>
+        <module>consumer-feign</module>
     </modules>
 
 

@@ -3,15 +3,15 @@ server:
 
 spring:
   application:
-    # Ö¸¶¨×¢²áµ½eureka serverÉÏµÄ·şÎñÃû³Æ£¬¶ÔÓÚµçÓ°Î¢·şÎñ£¬±¾ÏµÁĞ½«Ãû³ÆÉèÎªmicroservice-consumer-movie
+    # æŒ‡å®šæ³¨å†Œåˆ°eureka serverä¸Šçš„æœåŠ¡åç§°ï¼Œå¯¹äºç”µå½±å¾®æœåŠ¡ï¼Œæœ¬ç³»åˆ—å°†åç§°è®¾ä¸ºmicroservice-consumer-movie
     name: microservice-provider-user
   jpa:
-    # ÈÃhibernate´òÓ¡Ö´ĞĞµÄSQL
+    # è®©hibernateæ‰“å°æ‰§è¡Œçš„SQL
     show-sql: true
 logging:
   level:
     root: INFO
-    # ÅäÖÃÈÕÖ¾¼¶±ğ£¬ÈÃhibernate´òÓ¡³öÖ´ĞĞµÄSQL²ÎÊı
+    # é…ç½®æ—¥å¿—çº§åˆ«ï¼Œè®©hibernateæ‰“å°å‡ºæ‰§è¡Œçš„SQLå‚æ•°
     org.hibernate: INFO
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
     org.hibernate.type.descriptor.sql.BasicExtractor: TRACE
@@ -20,24 +20,19 @@ logging:
 management:
   endpoint:
     health:
-      # ÊÇ·ñÕ¹Ê¾½¡¿µ¼ì²éÏêÇé
+      # æ˜¯å¦å±•ç¤ºå¥åº·æ£€æŸ¥è¯¦æƒ…
       show-details: always
       enabled: true
   endpoints:
     web:
       exposure:
-        # ±©Â¶metrics¶Ëµã£¬ÈçĞè±©Â¶¶à¸ö£¬ÓÃ,·Ö¸ô£»ÈçĞè±©Â¶ËùÓĞ¶Ëµã£¬ÓÃ'*'
+        # æš´éœ²metricsç«¯ç‚¹ï¼Œå¦‚éœ€æš´éœ²å¤šä¸ªï¼Œç”¨,åˆ†éš”ï¼›å¦‚éœ€æš´éœ²æ‰€æœ‰ç«¯ç‚¹ï¼Œç”¨'*'
         include: metrics,health
-
-
-
-
-
 eureka:
   client:
     service-url:
-      # Ö¸¶¨eureka serverÍ¨ĞÅµØÖ·£¬×¢Òâ/eureka/Ğ¡Î²°Í²»ÄÜÉÙ
+      # æŒ‡å®šeureka serveré€šä¿¡åœ°å€ï¼Œæ³¨æ„/eureka/å°å°¾å·´ä¸èƒ½å°‘
       defaultZone: http://localhost:8761/eureka/
   instance:
-    # ÊÇ·ñ×¢²áIPµ½eureka server£¬Èç²»Ö¸¶¨»òÉèÎªfalse£¬ÄÇ¾Í»á×¢²áÖ÷»úÃûµ½eureka server
+    # æ˜¯å¦æ³¨å†ŒIPåˆ°eureka serverï¼Œå¦‚ä¸æŒ‡å®šæˆ–è®¾ä¸ºfalseï¼Œé‚£å°±ä¼šæ³¨å†Œä¸»æœºååˆ°eureka server
     prefer-ip-address: true

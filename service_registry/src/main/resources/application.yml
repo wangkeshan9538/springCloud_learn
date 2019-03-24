@@ -1,10 +1,13 @@
 spring:
   application:
     name: microservice-discovery-eureka-ha
+  profiles:
+    active: peer1
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://peer2:8762/eureka/,http://peer1:8761/eureka/
+      defaultZone: http://peer1:8761/eureka/
+
 ---
 spring:
   profiles: peer1
